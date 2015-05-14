@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/orgnk.iml" filepath="$PROJECT_DIR$/orgnk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ear/orgnk-ear.iml" filepath="$PROJECT_DIR$/ear/orgnk-ear.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ejb/orgnk-ejb.iml" filepath="$PROJECT_DIR$/ejb/orgnk-ejb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/web/orgnk-web.iml" filepath="$PROJECT_DIR$/web/orgnk-web.iml" />
     </modules>
   </component>
 </project>
