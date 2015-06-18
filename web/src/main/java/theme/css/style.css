@@ -1,0 +1,88 @@
+body {
+    background-color: white;
+    padding-top: 0px;
+    padding-bottom: 40px;
+}
+
+.hero-unit {
+    padding: 20px;
+    background-color: #0096D6;
+    color: #FFFFFF;
+    box-shadow: 0 1px 0 #64A8D1 inset, 0 1px 3px #000000;
+    text-shadow: 0 -1px 0 #124869;
+    margin: 0 0 20px;
+    padding-bottom: 10px;
+
+    /*background-image: url("logo.png");
+    background-position: left top;
+    background-repeat: no-repeat;*/
+}
+
+.hero-unit > img {
+    height: 100px;
+}
+
+.hero-unit > p {
+    text-align: right;
+}
+
+.paginador {
+    text-align: center;
+}
+
+.Three-Dee {
+    text-align: right;
+    font-family: sans-serif;
+    line-height: 1em;
+    color: azure;
+    font-weight: bold;
+    font-size: 25px;
+    text-shadow: 0 -1px 0 #124869;
+    padding-bottom: 23px;
+}
+
+.navbar-nav > li > a, .navbar-nav > li > p {
+    color: white;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.LinkMenu {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.42857;
+    color: #333;
+    white-space: nowrap;
+}
+
+.navbar-nav > li > .dropdown-menu {
+    text-shadow: 0 0 0;
+    line-height: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.nav > li > a {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+cabezal {
+    color: white;
+    text-shadow: 0 -1px 0 #124869;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+    text-decoration: none;
+    color: darkslategrey;
+    background-color: #eee;
+    text-shadow: 0 0 0;
+}
