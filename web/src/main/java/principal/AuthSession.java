@@ -5,6 +5,7 @@ import org.apache.wicket.authroles.authentication.AuthenticatedWebSession;
 import org.apache.wicket.authroles.authorization.strategies.role.Roles;
 import org.apache.wicket.injection.Injector;
 import org.apache.wicket.request.Request;
+import persistencia.entidades.Usuario;
 
 import javax.ejb.EJB;
 
@@ -14,6 +15,8 @@ public class AuthSession extends AuthenticatedWebSession {
     @EJB(name = "ServiceFacadeAuth")
     private IServiceFacadeAuth auth;
 
+    private Usuario usuario;
+
 
     public AuthSession(Request request) {
         super(request);
@@ -22,9 +25,15 @@ public class AuthSession extends AuthenticatedWebSession {
 
 
     @Override
-    public boolean authenticate(String nomRed, String pass) {
+    public boolean authenticate(String email, String pass) {
 
-        return true;
+        try {
+            usuario = auth.authUsuario(email, pass);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+
     }
 
     @Override
@@ -33,5 +42,7 @@ public class AuthSession extends AuthenticatedWebSession {
         return null;
     }
 
-
+    public Usuario getUsuario() {
+        return usuario;
+    }
 }

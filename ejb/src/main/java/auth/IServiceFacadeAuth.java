@@ -1,6 +1,8 @@
 package auth;
 
 
+import persistencia.entidades.Usuario;
+
 import javax.ejb.Remote;
 
 /**
@@ -8,5 +10,5 @@ import javax.ejb.Remote;
  */
 @Remote
 public interface IServiceFacadeAuth {
-    //Usuario authUsuario(String nomRed, String pass) throws Exception;
+    Usuario authUsuario(String email, String pass) throws Exception;
 }
