@@ -24,7 +24,7 @@
         <dependency>
             <groupId>org.apache.wicket</groupId>
             <artifactId>wicket-datetime</artifactId>
-            <version>6.7.0</version>
+            <version>${wicket.version}</version>
         </dependency>
 
         <dependency>
@@ -87,7 +87,7 @@
         <dependency>
             <groupId>org.apache.wicket</groupId>
             <artifactId>wicket-auth-roles</artifactId>
-            <version>6.17.0</version>
+            <version>${wicket.version}</version>
         </dependency>
 
 
