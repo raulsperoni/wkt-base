@@ -1,15 +1,14 @@
 package auth;
 
 
-import persistencia.Prueba;
+import interfaces.IServiceFacadeAuth;
+import persistencia.daos.UsuarioDao;
 import persistencia.entidades.Usuario;
 
 import javax.ejb.EJB;
-import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 
 @Stateless
-@LocalBean
 public class ServiceFacadeAuth implements IServiceFacadeAuth {
 
     public static String ADMIN = "ADMINISTRADOR";
@@ -18,7 +17,7 @@ public class ServiceFacadeAuth implements IServiceFacadeAuth {
 
 
     @EJB
-    Prueba prueba;
+    private UsuarioDao usuarioDao;
 
     public ServiceFacadeAuth() {
 
@@ -27,7 +26,7 @@ public class ServiceFacadeAuth implements IServiceFacadeAuth {
 
     @Override
     public Usuario authUsuario(String email, String pass) throws Exception {
-        Usuario u = prueba.getUsuario(email);
+        Usuario u = usuarioDao.find(email);
         if (u != null) return u;
         else throw new Exception("NO NO");
     }

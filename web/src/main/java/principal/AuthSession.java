@@ -1,6 +1,6 @@
 package principal;
 
-import auth.IServiceFacadeAuth;
+import interfaces.IServiceFacadeAuth;
 import org.apache.wicket.authroles.authentication.AuthenticatedWebSession;
 import org.apache.wicket.authroles.authorization.strategies.role.Roles;
 import org.apache.wicket.injection.Injector;

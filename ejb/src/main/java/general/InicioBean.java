@@ -1,6 +1,6 @@
 package general;
 
-import persistencia.Prueba;
+import persistencia.daos.UsuarioDao;
 import persistencia.entidades.Usuario;
 
 import javax.annotation.PostConstruct;
@@ -16,7 +16,7 @@ import javax.ejb.Startup;
 public class InicioBean {
 
     @EJB
-    Prueba prueba;
+    private UsuarioDao usuarioDao;
 
     public InicioBean() {
 
@@ -25,11 +25,11 @@ public class InicioBean {
     @PostConstruct
     public void init() {
 
-        if (prueba.getUsuario("raul@mgcoders.uy") == null) {
+        if (usuarioDao.find("raul@mgcoders.uy") == null) {
             Usuario u = new Usuario();
             u.setEmail("raul@mgcoders.uy");
             u.setPassword("hash");
-            prueba.guardarUsuario(u);
+            usuarioDao.create(u);
         }
 
     }

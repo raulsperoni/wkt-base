@@ -1,4 +1,4 @@
-package auth;
+package interfaces;
 
 
 import persistencia.entidades.Usuario;
