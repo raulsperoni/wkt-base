@@ -18,7 +18,7 @@
     </datasource>-->
     <datasource jta="false" jndi-name="java:jboss/datasources/orgnkDS"
                 pool-name="orgnkDS" enabled="true" use-java-context="true" use-ccm="false">
-        <connection-url>jdbc:postgresql://localhost:5432/jbossas</connection-url>
+        <connection-url>postgresql://$OPENSHIFT_POSTGRESQL_DB_HOST:$OPENSHIFT_POSTGRESQL_DB_PORT/jbossas</connection-url>
         <driver-class>org.postgresql.Driver</driver-class>
         <driver>postgresql-9.4-1201-jdbc41.jar</driver>
         <pool>
@@ -26,8 +26,8 @@
             <max-pool-size>20</max-pool-size>
         </pool>
         <security>
-            <user-name>adminpvfur52</user-name>
-            <password>Na4q4J6Zhfw_</password>
+            <user-name>adminbaamz7c</user-name>
+            <password>3qjq_-YkcltA</password>
         </security>
 
 
