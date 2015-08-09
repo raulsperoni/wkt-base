@@ -1,0 +1,19 @@
+<datasources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.jboss.org/ironjacamar/schema"
+             xsi:schemaLocation="http://www.jboss.org/ironjacamar/schema ">
+    <datasource jta="false" jndi-name="java:jboss/datasources/orgnkDS"
+                pool-name="orgnkDS" enabled="true" use-java-context="true" use-ccm="false">
+        <connection-url>jdbc:postgresql://localhost:5432/orgnk</connection-url>
+        <driver-class>org.postgresql.Driver</driver-class>
+        <driver>postgresql-9.4-1201-jdbc41.jar</driver>
+        <pool>
+            <min-pool-size>2</min-pool-size>
+            <max-pool-size>20</max-pool-size>
+        </pool>
+        <security>
+            <user-name>postgres</user-name>
+            <password>postgres</password>
+        </security>
+
+
+    </datasource>
+</datasources>
