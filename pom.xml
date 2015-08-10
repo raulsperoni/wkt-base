@@ -182,8 +182,7 @@
                         <artifactId>maven-ear-plugin</artifactId>
                         <version>2.10.1</version>
                         <configuration>
-                            <bundleDir>deployments</bundleDir>
-                            <bundleFileName>orgnk-ear</bundleFileName>
+                            <outputDirectory>deployments</outputDirectory>
                         </configuration>
                     </plugin>
                 </plugins>
