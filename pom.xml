@@ -176,7 +176,7 @@
             <!-- http://maven.apache.org/guides/mini/guide-building-for-different-environments.html -->
             <id>openshift</id>
             <build>
-                <finalName>jbossas</finalName>
+                <finalName>orgnk-ear.ear</finalName>
                 <plugins>
                     <plugin>
                         <artifactId>maven-ear-plugin</artifactId>
