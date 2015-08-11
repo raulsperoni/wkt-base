@@ -20,7 +20,7 @@
                 pool-name="orgnkDS" enabled="true" use-java-context="true" use-ccm="false">
         <connection-url>postgresql://$OPENSHIFT_POSTGRESQL_DB_HOST:$OPENSHIFT_POSTGRESQL_DB_PORT/jbossas</connection-url>
         <driver-class>org.postgresql.Driver</driver-class>
-        <driver>postgresql-9.4-1201-jdbc41.jar</driver>
+        <driver>9.2-1003-jdbc4.jar</driver>
         <pool>
             <min-pool-size>2</min-pool-size>
             <max-pool-size>20</max-pool-size>
