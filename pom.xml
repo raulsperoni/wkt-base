@@ -186,6 +186,13 @@
                         <version>2.10.1</version>
                         <configuration>
                             <outputDirectory>deployments</outputDirectory>
+                            <modules>
+                                <webModule>
+                                    <groupId>mgcoders.uy</groupId>
+                                    <artifactId>orgnk-web</artifactId>
+                                    <contextRoot>/</contextRoot>
+                                </webModule>
+                            </modules>
                         </configuration>
                     </plugin>
                 </plugins>
