@@ -15,7 +15,7 @@ public class MenuPanel extends Panel {
         super(id);
 
 
-        add(new Label("holaid", Model.of("Hola!")));
+        add(new Label("holaid", Model.of("MGCoders")));
 
     }
 
