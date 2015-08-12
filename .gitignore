@@ -68,3 +68,5 @@ crashlytics-build.properties
 ear/target
 ejb/c:
 c:
+ejb/target
+web/target
