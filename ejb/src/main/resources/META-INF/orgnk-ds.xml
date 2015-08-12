@@ -17,7 +17,7 @@
 
     </datasource>-->
     <datasource jta="false" jndi-name="java:jboss/datasources/orgnkDS"
-                pool-name="orgnkDS" enabled="true" use-java-context="true" use-ccm="false">
+                pool-name="orgnkDS" enabled="false" use-java-context="true" use-ccm="false">
         <connection-url>postgresql://$OPENSHIFT_POSTGRESQL_DB_HOST:$OPENSHIFT_POSTGRESQL_DB_PORT/jbossas</connection-url>
         <driver-class>org.postgresql.Driver</driver-class>
         <!--<driver>9.2-1003-jdbc4.jar</driver>-->
@@ -31,5 +31,23 @@
         </security>
 
 
+    </datasource>
+
+    <datasource jndi-name="java:jboss/datasources/orgnkDS" enabled="${postgresql.enabled}" use-java-context="true" pool-name="PostgreSQLDS" use-ccm="true">
+        <connection-url>jdbc:postgresql://${env.OPENSHIFT_POSTGRESQL_DB_HOST}:${env.OPENSHIFT_POSTGRESQL_DB_PORT}/${env.OPENSHIFT_APP_NAME}</connection-url>
+        <driver>postgresql</driver>
+        <security>
+            <user-name>${env.OPENSHIFT_POSTGRESQL_DB_USERNAME}</user-name>
+            <password>${env.OPENSHIFT_POSTGRESQL_DB_PASSWORD}</password>
+        </security>
+        <validation>
+            <check-valid-connection-sql>SELECT 1</check-valid-connection-sql>
+            <background-validation>true</background-validation>
+            <background-validation-millis>60000</background-validation-millis>
+            <!--<validate-on-match>true</validate-on-match>-->
+        </validation>
+        <pool>
+            <flush-strategy>IdleConnections</flush-strategy>
+        </pool>
     </datasource>
 </datasources>
